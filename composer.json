@@ -1,0 +1,27 @@
+{
+    "name"        : "fedor/alpine-blur",
+    "description" : "wordpress theme for my portfolio page",
+    "authors"     : [
+        {
+            "name"    : "zach fedor",
+            "email"   : "zachfedor@gmail.com",
+            "homepage": "http://zachfedor.com"
+        }
+    ],
+    "type"        : "project",
+    "repositories": [
+        {
+            "type": "composer",
+            "url" : "http://wpackagist.org"
+        }
+    ],
+    "require"     : {
+        "johnpbloch/wordpress"            : ">=3.9"
+    },
+    "require-dev" : {
+        "wpackagist-plugin/core-control"              : "*"
+    },
+    "extra"       : {
+        "wordpress-install-dir": "wp"
+    }
+}
