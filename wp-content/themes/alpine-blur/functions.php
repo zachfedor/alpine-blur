@@ -1,10 +1,10 @@
 <?php
 
 // Template
-include_once(CHILD_DIR.'/lib/template.php');
+include_once(get_stylesheet_directory() . '/lib/template.php');
 
 // Layout
-include_once(CHILD_DIR.'/lib/layout.php');
+include_once(get_stylesheet_directory() . '/lib/layout.php');
 
 // Admin
-//include_once(CHILD_DIR.'/lib/admin.php');
+//include_once('/lib/admin.php');

@@ -1,13 +1,7 @@
 <?php
 
 // Header
-include_once(CHILD_DIR.'/lib/layout/header.php');
-
-// Menus
-//include_once(CHILD_DIR.'/lib/layout/menu.php');
-
-// Sidebar
-include_once(CHILD_DIR.'/lib/layout/sidebar.php');
+include_once(get_stylesheet_directory() . '/lib/layout/header.php');
 
 // Footer
-include_once(CHILD_DIR.'/lib/layout/footer.php');
+include_once(get_stylesheet_directory() . '/lib/layout/footer.php');
