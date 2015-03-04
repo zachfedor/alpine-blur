@@ -8,12 +8,13 @@ var gulp = require( 'gulp' ),
     browserSync = require( 'browser-sync' ),
     reload = browserSync.reload;
 
+var assets = 'wp-content/themes/alpine-blur/assets';
 var config = {
-    sassDir: './assets/sass',
-    cssDir: './assets/css',
-    imgDir: './assets/images',
-    jsDir: './assets/js',
-    fontDir: './assets/fonts',
+    sassDir: assets + '/sass',
+    cssDir: assets + '/css',
+    imgDir: assets + '/images',
+    jsDir: assets + '/js',
+    fontDir: assets + '/fonts',
     bowerDir: './bower_components'
 }
 
@@ -33,13 +34,13 @@ gulp.task('styles', function() {
         .pipe(autoprefixer('last 3 version', 'ie 8', 'ie 9'))
         .pipe(rename({suffix: '.min'}))
         .pipe(minifyCSS())
-        .pipe(gulp.dest('assets/css'))
+        .pipe(gulp.dest( config.cssDir ))
         .pipe(reload({stream: true}));
 });
 
 gulp.task('watch', function() {
     browserSync({
-        proxy: "http://192.168.100.60/gsep_backup/"
+        proxy: "http://alpine-blur.dev/"
     });
     gulp.watch(config.sassDir + '/**/*.scss', ['styles']);
     gulp.watch("./**/*.php").on('change', reload);
