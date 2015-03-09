@@ -40,7 +40,7 @@ gulp.task('styles', function() {
 
 gulp.task('watch', function() {
     browserSync({
-        proxy: "http://alpine-blur.dev/"
+        proxy: "http://localhost/alpine-blur/"
     });
     gulp.watch(config.sassDir + '/**/*.scss', ['styles']);
     gulp.watch("./**/*.php").on('change', reload);
